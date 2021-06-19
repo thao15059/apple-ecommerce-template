@@ -1,9 +1,11 @@
 // Common
-document.querySelectorAll(".watch-control, controls a").forEach((control) => {
-  control.addEventListener("click", (e) => {
-    e.preventDefault();
+document
+  .querySelectorAll(".watch-control, controls a, .iphone-btn")
+  .forEach((control) => {
+    control.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
   });
-});
 
 const slideshowDivs = () => {
   for (let i = 1; i <= 5; i++) {
@@ -118,7 +120,7 @@ let axisX = 0;
 let axisY = 0;
 
 const hideControl = () => {
-  if (axisY === -280) {
+  if (axisY === -350) {
     watchTopControl.classList.add("hide-control");
   } else {
     watchTopControl.classList.remove("hide-control");
@@ -130,7 +132,7 @@ const hideControl = () => {
     watchBottomControl.classList.remove("hide-control");
   }
 
-  if (axisX === -280) {
+  if (axisX === -350) {
     watchRightControl.classList.add("hide-control");
   } else {
     watchRightControl.classList.remove("hide-control");
